@@ -1,0 +1,19 @@
+a{
+   color: yellowgreen;
+   padding: 2px;
+   border: 2px solid greenyellow;
+   margin:40px;
+   white-space: 30px;
+}
+h1{
+    color: yellowgreen;
+    padding:2px;
+    border:solid green; 
+    margin:20px; 
+}
+label{
+    color:yellowgreen; 
+    padding:2px; 
+    margin:2px;
+    white-space:5px;
+}

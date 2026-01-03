@@ -1,0 +1,93 @@
+.slider-frame {
+    width: 200%;           /* Full width of the page */
+    max-width: 900px;      /* Constraint: Don't get too big on desktop */
+    height: 600px;         /* Fixed height */
+    margin: 50px auto;     /* Center it */
+    overflow: hidden;      /* THE SECRET: Hide everything outside the box */
+    border-radius: 5px;   /* Make it look modern */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* The "Pop" effect */
+}
+
+/* 2. The Train */
+.slide-images {
+    display: flex;         /* Put images in a row, not a column */
+    width: 300%;           /* 3 Images = 300% Width */
+    height: 100%;
+    
+    /* The Animation Trigger */
+    animation: slide-animation 12s infinite ease-in-out;
+}
+
+/* 3. The Carriages */
+.img-container {
+    width: 100%;           /* Each image takes 1/3 of the train (which is 1 screen wide) */
+    height: 100%;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* Ensures image fills box without stretching */
+}
+
+/* 4. The Logic (Keyframes) */
+/* This calculates where the train needs to be */
+@keyframes slide-animation {
+    /* Show Image 1 */
+    0% { transform: translateX(0); }
+    30% { transform: translateX(0); } /* Stay still for a bit */
+    
+    /* Slide to Image 2 */
+    35% { transform: translateX(-33.33%); } /* Move 1/3 to the left */
+    65% { transform: translateX(-33.33%); } /* Stay still */
+
+    /* Slide to Image 3 */
+    70% { transform: translateX(-66.66%); } /* Move 2/3 to the left */
+    95% { transform: translateX(-66.66%); } /* Stay still */
+
+    /* Snap back to start (Loop) */
+    100% { transform: translateX(0); }
+}
+img{
+    align-items: center;
+    border: 2px solid greenyellow;
+}
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-items: flex-start;
+}
+a{
+    padding:3px;
+    color:greenyellow; 
+    border:1px solid greenyellow; 
+    margin:40px; 
+    white-space:20px;
+}
+h1{
+    text-shadow: 3cqb;
+    color:greenyellow; 
+    text-align: center;
+    padding: 1px;;
+}
+p{
+    padding: 2rem; 
+    border: 2px solid blue;
+}
+div{
+    padding: 2rem ;
+    border: 2px;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+ol{
+    text-align: center;
+    color: red;
+}
+ul{
+    text-align: center;
+    color:red;
+}
+
