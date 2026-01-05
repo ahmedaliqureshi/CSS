@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0; 
+    box-sizing:broder-box; 
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ body{
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#f4f4f4;
+ }
+ .profilecard{
+    max-width:370px; 
+    width:100%; 
+    background:white; 
+    border-radius:24px;
+    border-color: rgb(15, 186, 244);
+ }
+.myimage{
+    position:relative; 
+    height:200px; 
+    width:200px; 
+    border-radius:50% ;
+    background-color: lightblue;
+    padding:3px;
+    color: solid blue; 
+    /* align-items: center; */ 
+}
+.myname{
+    white-space:5px;
+}
+.mydesignation{
+    white-space:5px; 
+
+}
