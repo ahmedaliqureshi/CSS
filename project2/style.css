@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap'); 
+:root{
+    --primary-color:red; 
+    --primary-color-dark:red; 
+    --white:white;
+    --max-width:1200px;
+}
+*{
+    padding:0; 
+    margin:0; 
+    box-sizing:border-box; 
+}
+img{
+    display:flex; 
+    width:100%;
+}
+.nav__logo{
+    height: 200px;
+    width:200px
+}
+a{
+    text-decoration: none;
+    transition: 0.3s;
+}
+ul{
+    list-style:none;
+}
+body{
+    font-family: "Robot",sans-serif;
+}
+.main{
+    position:relative; 
+    isolation:isolate; 
+    min-height:100vh; 
+    min-width: 100vh;
+    background-image: url("soldierinthedark.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-color:black ;
+}
+.main.before{
+    position:absolute; 
+    content:""; 
+    inset:0; 
+    opacity:1; 
+    background-color: black; 
+    z-index:999;
+
+    animation: main-slider 2s ease-in-out forwards;
+}
+@keyframes main-slider {
+    90%{
+        opacity:0; 
+        trnasfrom:trnaslatex(0);
+    }
+    100%{
+        opacity:0; 
+        transform:trnaslatex(-100%);
+    }
+}
+nav{
+    position:fixed; 
+    isolation: isolate; 
+    width:100%; 
+    z-index:9;
+}
+.nav__header{
+    padding:.75rem 1 rem; 
+    width:100%; 
+    display:flex; 
+    align-items:center;
+    justify-content:space-between; 
+    background-color: var(--primary-color);
+}
+.nav__logo a img{
+    max-width: 75px;
+}
+.nav__menu__btn{
+    font-size:1.5rem; 
+    color:var(--white);
+    cursor:pointer; 
+}
+.nav_links{
+    position:absolute; 
+    bottom:0; 
+    left:0; 
+    width:100%; 
+    display:flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:2rem; 
+    padding:2rem; 
+    background-color:var(--primary-color); 
+    transition: transform .5s; 
+    z-index: -1;
+}
+.nav_links.open{
+    transform:translateY(100%);
+}
+.nav_links a{
+    color: var(--white); 
+    white-space:nowrap;
+
+}
+
+@media(width>768px)
+{
+       nav{
+        position:static; 
+        padding:2rem 1rem; 
+        max-width: var(--max-width); 
+        margin-inline:auto; 
+        display:flex; 
+        align-items:flex-start; 
+        gap:3rem; 
+       }
+        .nav__header{
+        width: fit-content;
+        padding:0; 
+        background-color: transparent;
+       }
+        .nav__logo a img{
+         max-width: 120px
+      }
+      .nav__menu__btn{
+         display:none;
+      }
+      .nav_links{
+        position: static;
+        width:fit-content;
+        padding:0;
+        flex-direction:row;
+        gap:3 rem; 
+        background-color:transparent;
+        transform: none !important ;
+      }
+   
+      .nav_links a:hover{
+        color:var(--primary-color);
+      }
+}
