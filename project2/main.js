@@ -12,6 +12,25 @@ menuBtn.addEventListener("click",()=>{
     );
 });
 navlinks.addEventListener("click",()=>{
-    navLinks.classList.remove("open"); 
+    navlinks.classList.remove("open"); 
     menuBtnIcon.setAttribute("class","ri-menu-line");
 })
+const scrollRevealOption={
+    distance:"50px",
+    origin:"bottom",
+    duration:2000,
+};
+ScrollReveal().reveal(".header_container h1",{
+...scrollRevealOption,
+delay:1000,
+});
+ScrollReveal().reveal(".header_container p",{
+    ...scrollRevealOption,
+    delay:2000,
+
+});
+ScrollReveal().reveal(".header_container .header__btn",{
+    ...scrollRevealOption,
+    delay:3000,
+
+});
