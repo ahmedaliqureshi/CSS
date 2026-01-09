@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+*{
+    padding:0; 
+    margin:0; 
+    box-sizing:border-box;
+}
+:root{
+    --primary-color:black;
+    --text-dark:solid grey; 
+    --white:white;
+    --color: gold;
+    --max-width:1200px
+}
+.btn{
+    position:absolute;
+    padding:1rem 2rem;
+    outline:none;
+    border:none; 
+    font-weight:600; 
+    cursor:pointer;
+}
+a{
+    text-decoration: none;
+    transition:0.3s;
+}
+body{
+    font-family:"Noto Sans" sans-serif ;
+    background-color:grey;
+}
+body::after{
+    position:fixed;
+    content:""; 
+    bottom: 0;
+    height:100vh;
+    width:0; 
+    top:0;
+    right:0; 
+    background-color:white;
+    z-index:1;
+
+    animation:body-bg 1s ease-in-out forwards;    
+}
+
+@keyframes body-bg {
+    0%{
+        width:0vw;
+        /* height:0vw; */
+        /* length:0vw; */
+    }
+    100%{
+        width:50vw;
+        /* height: 100vw; */
+        /* length:50vw; */
+       
+    }
+}
+body::before{
+    position:fixed;
+    content:"0"; 
+    top:0;
+    left:0;
+    transform: translate(-50%,-50%);
+    font-size:70rem; 
+    font-weight:200; 
+    color:black;
+    z-index:-1;
+    opacity:0.5;
+}
+.container{
+    position:relative; 
+    isolation:isolate;
+    min-height:100vh;
+    max-width: var(--max-width);
+    margin-inline:auto; 
+    overflow:hidden;
+    z-index: 10;
+}
+nav{
+    padding:2rem 0;
+    padding-inline:1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:1rem;
+}
+
+.nav_links{
+    list-style:none;
+    display: flex;
+    align-items:center; 
+    gap:2rem;
+}
+.nav_links a{
+    font-weight: 500;
+    
+}
+.nav_links .logo{
+    font-size: 1.2rem;
+    font-weight:800;
+    z-index: 12;
+}
+.nav_left a{
+    color:var(--white);
+    z-index:12;
+}
+.nav_right a{
+    color:var(--text-dark);
+    z-index:12;
+}
+
+.nav_links a:hover{
+    color:var(--color);
+}
+
+
+/* .btn:hover{
+color:var(--color);
+ } */
+ /* .btn.nav_left.nav_right:hover{
+    color:var(--color);
+ } */
+
+
+/* .rolex_img{
+    position:absolute;
+    z-index:30;
+
+    width:350px !important;
+    height:auto; 
+
+    top:50px; 
+    left:200px;
+    
+
+} 
+
+.watch_img{
+/* TARGET THE FILE NAME DIRECTLY */
+
+    /* position: absolute;
+    z-index: 30; */
+    
+    /* FORCE SIZE */
+    /* width: 350px !important;
+    height: auto;
+     */
+    /* POSITIONING */
+    /* top: 50%; */
+    /* left: 50%;
+    transform: translate(-50%, -50%);
+     */
+    /* SHADOW */
+    /* filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+}  */
+  
+/* ========================
+   1. THE WATCH SETTINGS
+   ======================== */
+img[src*="blackchronographwr.png"] {
+    position: absolute;
+    z-index: 10; 
+    
+    /* Watch Size */
+    width: 230px !important; 
+    height: auto;
+    
+    /* Watch Position (Centered in White Area) */
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+
+    /* pointer-events:none; */
+}
+
+/* ========================
+   2. THE LOGO SETTINGS
+   ======================== */
+img[src*="Rolex symbol.png"] {
+    position: absolute;
+    z-index: 3; /* Higher than watch so it sits on top */
+    
+    /* Logo Size - CHANGE THIS TO RESIZE */
+    width: 1000px !important; 
+    height: auto;
+
+    /* Logo Position */
+    top: 40%;  /* Adjust this to move it Up/Down */
+    left: 50%; /* Adjust this to move it Left/Right */
+    
+    /* IMPORTANT: This stops it from "Moving Right" when it grows */
+    transform: translate(-50%, -50%);
+    
+    /* Make sure it is visible on grey background */
+    filter: invert(0); /* Change to 1 if you need it white */
+    pointer-events:none;
+}
+
+.container h4{
+position:absolute;
+top:50%; 
+left:50%;
+font-size:5rem; 
+letter-spacing:25px;
+}
+.text_left{
+   transform:translate(calc(-50% - 250px),-50px);
+   color: var(--white);
+}
+
+.text_right{
+    transform: translate(calc(-50% + 250px),-50px);
+    color:var(black);
+}
+
+.container .btn.explore{
+    top:77%; 
+    left:43%;
+    transform:translate(-50%,calc(-50%-250px));
+    color: var(--text-dark);
+    background-color: var(--white);
+    box-shadow: 0 0 50px rgba(0,0,0,0.4);
+
+}
+
+.btn.explore:hover{
+    /* color: var(--color); */
+    background-color: var(--color);
+}
+
+.container .btn.print{
+    top:55%;
+    right:-4%;
+    transform:translate(0,-50%) rotate(90deg);
+    padding:calc(1rem -4px) calc(2rem - 4px);
+    color:var(--white);
+    background-color:grey;
+    box-shadow:0 0 50px rgba(0,0,0,0.4);
+    border:1px solid var(black);
+    z-index:2px;
+}
+
+.btn.print:hover{
+    /* color: var(--color); */
+    background-color: var(--color);
+}
+
+
+.container .btn.catalog{
+    top:25%;
+    left:0%;
+    transform:translate(0,-50%) rotate(90deg);
+    padding:calc(1rem -4px) calc(2rem - 4px);
+    color:var(--white);
+    background-color:black;
+    box-shadow:0 0 50px rgba(0,0,0,0.4);
+    border:1px solid var(black);
+    z-index:2px;
+}
+
+.btn.btn.catalog:hover{
+    /* color: var(--color); */
+    background-color: var(--color);
+}
