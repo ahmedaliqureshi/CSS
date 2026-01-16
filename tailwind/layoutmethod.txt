@@ -1,0 +1,59 @@
+1) layout:- 
+
+1.1)aspect-ration:-
+
+utilites for controlling the aspect ratio of an element
+
+1.1.1) aspect-<ratio>   
+1.1.2)aspect-square
+1.1.3)aspect-video 
+1.1.4)aspect-auto
+1.1.5)aspect-(<custom-property>)
+1.1.6)aspect-[<value>]
+
+2.1)columns:- 
+
+utilites for controlling the number of colums wihtin a element. 
+
+2.1.1) columns-<numbers>
+2.1.2)columns-3xs
+2.1.3)columns-2xs 
+2.1.4)columns-xs
+2.1.5)columns-sm
+2.1.6)columns-md
+2.1.7)columns-lg
+2.1.8)columns-xl
+2.1.9)columns-2xl
+2.1.10)columns-3xl
+2.1.11)columns-4xl-7xl
+2.1.12)columns-auto
+2.1.13)columns-(<cutom-property>)
+2.1.14)columns-[<value>]
+
+3.1) break-after:- 
+
+utilites for controlling how a column or page should break after an element
+
+3.1.1)break-afer-auto               
+3.1.2)break-after-avoid           
+3.1.3)break-after-all 
+3.1.4)break-after-avoid-page
+3.1.5)break-after-page
+3.1.6)break-after-left
+3.1.7)break-after-right
+3.1.8)break-after-column
+
+
+4.1) break-before:- 
+
+utilites for controlling how a column or page should break before an element.
+
+break-before
+break-before-avoid
+break-before-all 
+break-before-avoid-page
+break-before-page
+break-before-left
+break-before-right
+break-before-column 
+
